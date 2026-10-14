@@ -1,0 +1,11 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Vetri Osai Pediatric Auditory Practice & Clinical Management
+    // Allows all students, sessions, attendance, schedules, audio, and users
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}
+

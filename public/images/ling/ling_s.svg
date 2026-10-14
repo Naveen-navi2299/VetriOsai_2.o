@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 550" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg-s" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#BAE6FD"/>
+      <stop offset="60%" stop-color="#7DD3FC"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </radialGradient>
+    <linearGradient id="grass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#86EFAC"/>
+      <stop offset="100%" stop-color="#22C55E"/>
+    </linearGradient>
+    <filter id="shadow-s" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#14532D" flood-opacity="0.25"/>
+    </filter>
+    <linearGradient id="snake-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ADE80"/>
+      <stop offset="50%" stop-color="#22C55E"/>
+      <stop offset="100%" stop-color="#16A34A"/>
+    </linearGradient>
+    <linearGradient id="snake-belly" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FEF08A"/>
+      <stop offset="100%" stop-color="#FACC15"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky Background -->
+  <rect width="400" height="550" rx="36" fill="url(#bg-s)"/>
+
+  <!-- Sun & Clouds in Sky -->
+  <circle cx="80" cy="90" r="34" fill="#FDE047" opacity="0.9"/>
+  <ellipse cx="320" cy="85" rx="36" ry="18" fill="#FFFFFF" opacity="0.85"/>
+  <ellipse cx="340" cy="78" rx="24" ry="16" fill="#FFFFFF" opacity="0.85"/>
+  <ellipse cx="300" cy="88" rx="20" ry="14" fill="#FFFFFF" opacity="0.85"/>
+
+  <!-- Rolling Lush Green Hills -->
+  <path d="M 0 430 Q 120 370 240 400 Q 340 425 400 390 L 400 550 L 0 550 Z" fill="url(#grass)"/>
+  <path d="M 0 460 Q 180 430 400 470 L 400 550 L 0 550 Z" fill="#15803D" opacity="0.4"/>
+
+  <!-- Grass Blades & Flowers -->
+  <path d="M 60 410 Q 55 385 50 380 Q 65 390 70 410" fill="#166534"/>
+  <path d="M 75 420 Q 80 395 85 390 Q 85 405 80 420" fill="#166534"/>
+  <path d="M 320 420 Q 325 390 335 385 Q 330 405 325 420" fill="#166534"/>
+  <circle cx="95" cy="430" r="6" fill="#F43F5E"/>
+  <circle cx="95" cy="430" r="2.5" fill="#FEF08A"/>
+  <circle cx="310" cy="445" r="5" fill="#FB923C"/>
+  <circle cx="310" cy="445" r="2" fill="#FEF08A"/>
+
+  <!-- Friendly Coiled Snake Character -->
+  <g filter="url(#shadow-s)">
+    <!-- Bottom Coils -->
+    <path d="M 120 460 C 90 440 90 390 140 375 C 220 350 310 390 280 440 C 260 470 170 480 120 460 Z" fill="url(#snake-body)"/>
+    <!-- Yellow Belly underside of coil -->
+    <path d="M 140 465 C 180 475 250 465 265 440 C 255 450 190 460 140 465 Z" fill="url(#snake-belly)"/>
+
+    <!-- Middle Coil Raising Up -->
+    <path d="M 160 410 C 130 380 140 310 190 280 C 220 260 250 290 240 340 C 230 390 190 420 160 410 Z" fill="url(#snake-body)"/>
+
+    <!-- Snake Dark Green Spots -->
+    <circle cx="160" cy="385" r="8" fill="#15803D"/>
+    <circle cx="210" cy="360" r="10" fill="#15803D"/>
+    <circle cx="255" cy="415" r="9" fill="#15803D"/>
+    <circle cx="125" cy="420" r="7" fill="#15803D"/>
+
+    <!-- Snake Head -->
+    <ellipse cx="200" cy="220" rx="55" ry="46" fill="url(#snake-body)"/>
+
+    <!-- Snake Yellow Cheeks -->
+    <ellipse cx="165" cy="235" rx="14" ry="10" fill="#FDE047" opacity="0.8"/>
+    <ellipse cx="235" cy="235" rx="14" ry="10" fill="#FDE047" opacity="0.8"/>
+
+    <!-- Big Cute Snake Eyes -->
+    <ellipse cx="178" cy="195" rx="14" ry="18" fill="#FFFFFF"/>
+    <ellipse cx="222" cy="195" rx="14" ry="18" fill="#FFFFFF"/>
+    <circle cx="180" cy="195" r="9" fill="#14532D"/>
+    <circle cx="220" cy="195" r="9" fill="#14532D"/>
+    <circle cx="176" cy="190" r="4" fill="#FFFFFF"/>
+    <circle cx="216" cy="190" r="4" fill="#FFFFFF"/>
+
+    <!-- Smiling Mouth -->
+    <path d="M 175 235 Q 200 255 225 235" stroke="#14532D" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Pink Forked Tongue Flicking Out -->
+    <path d="M 200 248 L 200 285 L 188 300" stroke="#F43F5E" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M 200 285 L 212 300" stroke="#F43F5E" stroke-width="4" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Wavy Sound Trails -->
+  <path d="M 265 210 Q 295 190 280 170 Q 265 150 295 130" stroke="#16A34A" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M 285 225 Q 320 200 305 175 Q 290 150 325 125" stroke="#16A34A" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+</svg>

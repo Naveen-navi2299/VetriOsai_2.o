@@ -1,0 +1,120 @@
+{
+  "entities": {
+    "users": {
+      "title": "User",
+      "description": "Authenticated user profiles (parents, therapists, students)",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "role": { "type": "string", "enum": ["parent", "student", "therapist", "admin"] },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "email", "displayName"]
+    },
+    "students": {
+      "title": "Student",
+      "description": "Student profiles undergoing speech & auditory calibration",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "name": { "type": "string" },
+        "age": { "type": "number" },
+        "diagnosis": { "type": "string" },
+        "hearingDevice": { "type": "string" },
+        "parentName": { "type": "string" },
+        "parentEmail": { "type": "string" },
+        "streak": { "type": "number" },
+        "lastSessionDate": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "name", "parentEmail"]
+    },
+    "sessions": {
+      "title": "Therapy Session",
+      "description": "Speech therapy and listening games session telemetry",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "studentId": { "type": "string" },
+        "category": { "type": "string" },
+        "score": { "type": "number" },
+        "date": { "type": "string" },
+        "notes": { "type": "string" }
+      },
+      "required": ["id", "studentId", "category", "score", "date"]
+    },
+    "schedules": {
+      "title": "Class Schedule",
+      "description": "Class routines and therapy appointments synced with Google Calendar",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "studentId": { "type": "string" },
+        "title": { "type": "string" },
+        "startTime": { "type": "string" },
+        "endTime": { "type": "string" },
+        "dayOfWeek": { "type": "string" },
+        "googleCalendarEventId": { "type": "string" }
+      },
+      "required": ["id", "studentId", "title", "startTime"]
+    },
+    "attendance": {
+      "title": "Attendance Record",
+      "description": "Daily streak and attendance logs",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "studentId": { "type": "string" },
+        "date": { "type": "string" },
+        "status": { "type": "string" }
+      },
+      "required": ["id", "studentId", "date", "status"]
+    },
+    "custom_audio": {
+      "title": "Custom Audio Asset",
+      "description": "Custom auditory stimuli files and Ling-6 sound recordings stored in database",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "phoneme": { "type": "string" },
+        "fileName": { "type": "string" },
+        "audioData": { "type": "string" },
+        "mimeType": { "type": "string" },
+        "fileSize": { "type": "number" },
+        "updatedAt": { "type": "string" },
+        "source": { "type": "string" }
+      },
+      "required": ["id", "phoneme", "fileName", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "users",
+      "description": "User profiles and therapy roles"
+    },
+    "/students/{studentId}": {
+      "schema": "students",
+      "description": "Pediatric patient records and calibration progress"
+    },
+    "/sessions/{sessionId}": {
+      "schema": "sessions",
+      "description": "Practice session telemetry and scores"
+    },
+    "/schedules/{scheduleId}": {
+      "schema": "schedules",
+      "description": "Appointments and class calendars"
+    },
+    "/attendance/{attendanceId}": {
+      "schema": "attendance",
+      "description": "Attendance history"
+    },
+    "/custom_audio/{audioId}": {
+      "schema": "custom_audio",
+      "description": "Ling-6 and Listening Forest custom audio stimuli recordings"
+    }
+  }
+}

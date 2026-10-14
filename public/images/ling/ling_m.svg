@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 550" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg-m" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#FEF9C3"/>
+      <stop offset="50%" stop-color="#FEF08A"/>
+      <stop offset="100%" stop-color="#FDE047"/>
+    </radialGradient>
+    <filter id="shadow-m" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#854D0E" flood-opacity="0.18"/>
+    </filter>
+    <linearGradient id="skin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFE4D6"/>
+      <stop offset="100%" stop-color="#FBCFE8"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#78350F"/>
+      <stop offset="100%" stop-color="#451A03"/>
+    </linearGradient>
+    <linearGradient id="shirt-m" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="ice-cream" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FDA4AF"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <linearGradient id="cone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="400" height="550" rx="36" fill="url(#bg-m)"/>
+
+  <!-- Radiating Happiness Sparks -->
+  <circle cx="80" cy="90" r="14" fill="#FBBF24" opacity="0.6"/>
+  <circle cx="330" cy="120" r="18" fill="#FBBF24" opacity="0.5"/>
+  <circle cx="60" cy="380" r="12" fill="#FDE047" opacity="0.7"/>
+  <circle cx="340" cy="400" r="16" fill="#FDE047" opacity="0.6"/>
+  <polygon points="90,70 94,82 106,86 94,90 90,102 86,90 74,86 86,82" fill="#F59E0B" opacity="0.7"/>
+  <polygon points="320,80 323,90 333,93 323,96 320,106 317,96 307,93 317,90" fill="#F59E0B" opacity="0.7"/>
+
+  <!-- Character Group -->
+  <g filter="url(#shadow-m)">
+    <!-- Shoulders & Blue Shirt -->
+    <path d="M 90 550 C 90 430 140 400 200 400 C 260 400 310 430 310 550 Z" fill="url(#shirt-m)"/>
+    <!-- Collar -->
+    <path d="M 160 400 C 180 425 220 425 240 400 Z" fill="#E0F2FE"/>
+
+    <!-- Neck -->
+    <rect x="175" y="360" width="50" height="50" rx="10" fill="#FCD34D" opacity="0.2"/>
+    <rect x="175" y="355" width="50" height="50" rx="10" fill="url(#skin)"/>
+
+    <!-- Ears -->
+    <circle cx="120" cy="275" r="22" fill="url(#skin)"/>
+    <circle cx="120" cy="275" r="12" fill="#FDA4AF" opacity="0.6"/>
+    <circle cx="280" cy="275" r="22" fill="url(#skin)"/>
+    <circle cx="280" cy="275" r="12" fill="#FDA4AF" opacity="0.6"/>
+
+    <!-- Boy Head / Face -->
+    <ellipse cx="200" cy="270" rx="82" ry="92" fill="url(#skin)"/>
+
+    <!-- Rosy Cheeks -->
+    <ellipse cx="145" cy="295" rx="18" ry="12" fill="#FB7185" opacity="0.45"/>
+    <ellipse cx="255" cy="295" rx="18" ry="12" fill="#FB7185" opacity="0.45"/>
+
+    <!-- Happy Closed Eyes (Delight) -->
+    <path d="M 142 250 Q 158 234 174 250" stroke="#451A03" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <path d="M 226 250 Q 242 234 258 250" stroke="#451A03" stroke-width="5" stroke-linecap="round" fill="none"/>
+
+    <!-- Eyebrows -->
+    <path d="M 140 232 Q 158 220 176 235" stroke="#78350F" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+    <path d="M 224 235 Q 242 220 260 232" stroke="#78350F" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Cute Nose -->
+    <ellipse cx="200" cy="275" rx="6" ry="5" fill="#F472B6" opacity="0.6"/>
+
+    <!-- Joyful Open Smiling Mouth with Tongue Licking -->
+    <path d="M 172 305 Q 200 345 228 305 Q 200 315 172 305 Z" fill="#991B1B"/>
+    <!-- Tongue extending out toward ice cream -->
+    <path d="M 188 312 C 188 335 225 345 225 320 C 225 310 205 308 188 312 Z" fill="#FB7185"/>
+
+    <!-- Brown Hair -->
+    <path d="M 118 240 C 110 160 160 140 200 140 C 250 140 290 165 282 240 C 275 200 250 175 220 178 C 190 182 170 170 150 190 C 130 210 125 225 118 240 Z" fill="url(#hair)"/>
+    <path d="M 170 165 Q 190 145 205 170" stroke="url(#hair)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M 140 185 Q 160 160 175 195" stroke="url(#hair)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M 220 175 Q 245 155 255 190" stroke="url(#hair)" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <!-- Ice Cream Cone in Hand -->
+  <g transform="translate(210, 275)" filter="url(#shadow-m)">
+    <!-- Arm / Hand holding cone -->
+    <ellipse cx="25" cy="120" rx="20" ry="16" fill="url(#skin)"/>
+    <!-- Waffle Cone -->
+    <polygon points="5,70 55,70 30,150" fill="url(#cone)"/>
+    <line x1="12" y1="85" x2="48" y2="85" stroke="#B45309" stroke-width="2"/>
+    <line x1="18" y1="105" x2="42" y2="105" stroke="#B45309" stroke-width="2"/>
+    <line x1="22" y1="125" x2="38" y2="125" stroke="#B45309" stroke-width="2"/>
+
+    <!-- Strawberry Ice Cream Scoop -->
+    <circle cx="30" cy="50" r="34" fill="url(#ice-cream)"/>
+    <circle cx="16" cy="62" r="14" fill="#FB7185"/>
+    <circle cx="44" cy="62" r="14" fill="#FB7185"/>
+
+    <!-- Sprinkles on Ice Cream -->
+    <line x1="20" y1="35" x2="28" y2="38" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+    <line x1="38" y1="32" x2="44" y2="40" stroke="#FBBF24" stroke-width="3" stroke-linecap="round"/>
+    <line x1="28" y1="52" x2="36" y2="50" stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
+    <line x1="16" y1="48" x2="22" y2="54" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+    <line x1="38" y1="56" x2="44" y2="52" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Cherry on top -->
+    <circle cx="30" cy="18" r="10" fill="#DC2626"/>
+    <path d="M 30 14 Q 40 4 48 8" stroke="#7F1D1D" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Ambient Musical Sound Waves -->
+  <path d="M 320 220 Q 345 240 320 260" stroke="#F59E0B" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.8"/>
+  <path d="M 335 205 Q 365 240 335 275" stroke="#F59E0B" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.6"/>
+</svg>

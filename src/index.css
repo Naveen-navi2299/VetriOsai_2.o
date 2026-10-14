@@ -1,0 +1,224 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Nunito', sans-serif;
+  --font-heading: 'Fredoka', cursive, sans-serif;
+  --font-rounded: 'Fredoka', cursive, sans-serif;
+
+  --color-brand-peach: #FFE7D9;
+  --color-brand-peach-border: #E6A885;
+  --color-brand-peach-active: #F39268;
+  --color-brand-teal-card: #D9F5F1;
+  --color-brand-teal-border: #38A3A5;
+  --color-brand-purple-card: #EFE7FE;
+  --color-brand-purple-border: #9D6DE6;
+  --color-brand-button-pink: #FF4D6D;
+
+  --color-brand-navy: #1E2958;
+  --color-brand-subtext: #374151;
+  --color-brand-soft-bg: #F3F7FE;
+  --color-brand-coral: #F05252;
+  --color-brand-cyan: #38BDF8;
+
+  --shadow-card: 0 12px 35px -8px rgba(160, 185, 225, 0.28), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+  --shadow-pill: 0 4px 14px rgba(244, 91, 105, 0.28);
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #ccebfd;
+  min-height: 100vh;
+  color: #1E2958;
+}
+
+.font-rounded, .font-heading {
+  font-family: 'Fredoka', cursive, sans-serif;
+}
+
+.custom-card-shadow {
+  box-shadow: 0 4px 20px -2px rgba(99, 102, 241, 0.08);
+}
+
+.custom-input {
+  border: 1.5px solid #d1d5db;
+  transition: all 0.2s ease-in-out;
+}
+.custom-input:focus {
+  border-color: #79c3f7;
+  box-shadow: 0 0 0 3px rgba(121, 195, 247, 0.25);
+  outline: none;
+}
+
+/* Try It button colorful gradient (Coral/Pink to Cyan/Turquoise) */
+.btn-try-gradient {
+  background: linear-gradient(90deg, #EE5866 0%, #E85D75 40%, #4FAEE7 85%, #38BDF8 100%);
+  transition: all 0.25s ease-in-out;
+}
+
+.btn-try-gradient:hover {
+  opacity: 0.94;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(238, 88, 102, 0.35);
+}
+
+/* Subtle interactive card lift */
+.adventure-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.adventure-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -10px rgba(140, 175, 230, 0.35);
+}
+
+/* Google Sign-In Material Button Styling */
+.gsi-material-button {
+  user-select: none;
+  background-color: #ffffff;
+  border: 1px solid #747775;
+  border-radius: 20px;
+  box-sizing: border-box;
+  color: #1f1f1f;
+  cursor: pointer;
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  letter-spacing: 0.25px;
+  outline: none;
+  overflow: hidden;
+  padding: 0 16px;
+  position: relative;
+  text-align: center;
+  transition: background-color 0.218s, border-color 0.218s, box-shadow 0.218s;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+  max-width: 400px;
+  min-width: min-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gsi-material-button:hover {
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  background-color: #f8fafc;
+}
+
+.gsi-material-button-content-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.gsi-material-button-icon {
+  height: 20px;
+  margin-right: 12px;
+  min-width: 20px;
+  width: 20px;
+}
+
+.gsi-material-button-contents {
+  flex-grow: 1;
+  font-family: 'Roboto', arial, sans-serif;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Precise chevron styling with clip-path and cascading layered drop-shadows */
+.chevron-layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  clip-path: polygon(36% 50%, 100% 0%, 100% 100%);
+  filter: drop-shadow(-16px 0 24px rgba(6, 12, 34, 0.65));
+  transition: transform 0.4s ease;
+}
+
+/* Gradient definitions for cascading chevron bands */
+.chevron-1 {
+  right: 0;
+  width: 58%;
+  background: linear-gradient(135deg, #1b3563 0%, #15264b 100%);
+  z-index: 10;
+}
+
+.chevron-2 {
+  right: -2%;
+  width: 50%;
+  background: linear-gradient(135deg, #184b72 0%, #133959 100%);
+  z-index: 20;
+}
+
+.chevron-3 {
+  right: -4%;
+  width: 42%;
+  background: linear-gradient(135deg, #1a657c 0%, #165166 100%);
+  z-index: 30;
+}
+
+.chevron-4 {
+  right: -6%;
+  width: 34%;
+  background: linear-gradient(135deg, #20878e 0%, #1a6d75 100%);
+  z-index: 40;
+}
+
+.chevron-5 {
+  right: -8%;
+  width: 26%;
+  background: linear-gradient(135deg, #2ebaa0 0%, #229984 100%);
+  z-index: 50;
+}
+
+.chevron-6 {
+  right: -10%;
+  width: 18%;
+  background: linear-gradient(135deg, #4ce2b9 0%, #35c49f 100%);
+  z-index: 60;
+}
+
+.chevron-7 {
+  right: -12%;
+  width: 10%;
+  background: linear-gradient(135deg, #81f5d2 0%, #5ce4bd 100%);
+  z-index: 70;
+}
+
+/* Subtle frosted glass buttons matching exact design */
+.btn-glass {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-glass:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.48);
+  box-shadow: 0 6px 20px rgba(46, 186, 160, 0.25);
+  transform: translateY(-1px);
+}
+
+.btn-glass:active {
+  transform: translateY(0);
+}
+

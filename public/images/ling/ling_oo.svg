@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 550" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg-oo" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#F472B6"/>
+      <stop offset="50%" stop-color="#DB2777"/>
+      <stop offset="100%" stop-color="#831843"/>
+    </radialGradient>
+    <filter id="shadow-oo" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#500724" flood-opacity="0.3"/>
+    </filter>
+    <filter id="glow-oo" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="ghost-sheet" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#F1F5F9"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <linearGradient id="ghost-shadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#CBD5E1"/>
+      <stop offset="100%" stop-color="#94A3B8"/>
+    </linearGradient>
+    <linearGradient id="girl-skin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFE4E6"/>
+      <stop offset="100%" stop-color="#FECDD3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="550" rx="36" fill="url(#bg-oo)"/>
+
+  <!-- Mystical Stars & Sparkles -->
+  <circle cx="70" cy="80" r="4" fill="#FDF2F8"/>
+  <circle cx="330" cy="90" r="5" fill="#FDF2F8"/>
+  <circle cx="80" cy="380" r="4" fill="#FCE7F3" opacity="0.7"/>
+  <circle cx="340" cy="360" r="5" fill="#FCE7F3" opacity="0.7"/>
+  <polygon points="90,140 93,150 103,153 93,156 90,166 87,156 77,153 87,150" fill="#FDE047" opacity="0.9"/>
+  <polygon points="310,140 313,150 323,153 313,156 310,166 307,156 297,153 307,150" fill="#FDE047" opacity="0.9"/>
+  <polygon points="200,60 203,70 213,73 203,76 200,86 197,76 187,73 197,70" fill="#FDE047" opacity="0.7"/>
+
+  <!-- Ghost Playful Little Girl Character -->
+  <g filter="url(#shadow-oo)">
+    <!-- Ghost Body / Sheet flowing down -->
+    <path d="M 120 220 
+             C 110 130, 290 130, 280 220
+             C 278 260, 340 300, 330 350
+             C 320 400, 300 480, 290 530
+             C 275 520, 260 540, 245 520
+             C 230 540, 215 520, 200 540
+             C 185 520, 170 540, 155 520
+             C 140 540, 125 520, 110 530
+             C 100 480, 80 400, 70 350
+             C 60 300, 122 260, 120 220 Z" 
+          fill="url(#ghost-sheet)"/>
+
+    <!-- Ghost Sheet Shadow Folds -->
+    <path d="M 155 520 Q 155 450 170 410" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M 245 520 Q 245 450 230 410" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M 200 540 Q 200 460 200 430" stroke="#CBD5E1" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+    <!-- Cutout in Ghost Sheet showing Girl's Face -->
+    <ellipse cx="200" cy="245" rx="68" ry="74" fill="url(#girl-skin)"/>
+
+    <!-- Dark Brown Bangs peaking out -->
+    <path d="M 140 210 Q 170 190 200 215 Q 230 190 260 210 Q 240 180 200 180 Q 160 180 140 210 Z" fill="#451A03"/>
+
+    <!-- Ghost Costume Eye Cutouts / Girl's Big Expressive Eyes -->
+    <ellipse cx="168" cy="235" rx="14" ry="18" fill="#1E293B"/>
+    <ellipse cx="232" cy="235" rx="14" ry="18" fill="#1E293B"/>
+
+    <!-- Eye Highlights -->
+    <circle cx="164" cy="228" r="6" fill="#FFFFFF"/>
+    <circle cx="172" cy="242" r="3" fill="#FFFFFF"/>
+    <circle cx="228" cy="228" r="6" fill="#FFFFFF"/>
+    <circle cx="236" cy="242" r="3" fill="#FFFFFF"/>
+
+    <!-- Rosy Cheeks -->
+    <ellipse cx="150" cy="265" rx="14" ry="9" fill="#FB7185" opacity="0.6"/>
+    <ellipse cx="250" cy="265" rx="14" ry="9" fill="#FB7185" opacity="0.6"/>
+
+    <!-- Cute Round "Ooo" Mouth -->
+    <ellipse cx="200" cy="275" rx="15" ry="20" fill="#881337"/>
+    <ellipse cx="200" cy="272" rx="11" ry="15" fill="#4C0519"/>
+    <!-- Tongue hint in mouth -->
+    <path d="M 193 283 Q 200 290 207 283" stroke="#F43F5E" stroke-width="4" stroke-linecap="round" fill="none"/>
+
+    <!-- Playful Floating Ghost Hands -->
+    <!-- Left Hand -->
+    <path d="M 95 310 C 65 290 55 250 85 240 C 110 230 115 270 105 310 Z" fill="url(#ghost-sheet)"/>
+    <!-- Right Hand -->
+    <path d="M 305 310 C 335 290 345 250 315 240 C 290 230 285 270 295 310 Z" fill="url(#ghost-sheet)"/>
+  </g>
+
+  <!-- Ambient Sound Vibe Rings -->
+  <circle cx="200" cy="275" r="45" stroke="#FDF2F8" stroke-width="3" stroke-dasharray="6 6" fill="none" opacity="0.6"/>
+  <circle cx="200" cy="275" r="65" stroke="#FDF2F8" stroke-width="2.5" stroke-dasharray="8 8" fill="none" opacity="0.4"/>
+</svg>

@@ -1,0 +1,6 @@
+{
+  "name": "Vetri Osai - Pediatric Speech & Auditory Care",
+  "description": "Supportive speech therapy, Ling-6 auditory calibration, student progress tracking, and Google Workspace integration for children and parents.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
