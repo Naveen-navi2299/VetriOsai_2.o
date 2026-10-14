@@ -5,6 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: '/VetriOsai_2.o/';
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
