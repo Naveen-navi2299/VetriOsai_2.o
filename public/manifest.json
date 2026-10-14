@@ -1,13 +1,21 @@
 {
-  "background_color": "#ffffff",
+  "name": "VetriOsai",
+  "short_name": "VetriOsai",
   "description": "Supportive speech therapy, Ling-6 auditory calibration, student progress tracking, and Google Workspace integration for children and parents.",
   "dir": "ltr",
   "display": "standalone",
-  "name": "VetriOsai",
   "orientation": "any",
-  "scope": "/",
-  "short_name": "VetriOsai",
-  "start_url": "/",
-  "theme_color": "#ffffff",
-  "id": "/VetriOsai_2.o/"
+  "id": "/VetriOsai_2.0/",
+  "start_url": "/VetriOsai_2.0/",
+  "scope": "/VetriOsai_2.0/",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/VetriOsai_2.0/vetriosai_2.o_logo.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
 }
